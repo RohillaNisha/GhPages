@@ -19,10 +19,15 @@
     /* object-fit: cover; */
     height: 3rem;
     width: 4rem;
+    cursor: pointer;
 }
 
 .desktopMenuListItem {
     margin: 1rem;
+    cursor: pointer;
+}
+
+.desktopMenuBtn {
     cursor: pointer;
 }
 
@@ -52,7 +57,7 @@
     border-radius: 2rem;
 }
 
-.active {
+.desktopMenu .active , .navMenu .active {
     color:  rgba(255, 187, 0, 0.712);
     padding-bottom: 0.5rem;
     border-bottom: 3px solid rgba(255, 187, 0, 0.712) ;

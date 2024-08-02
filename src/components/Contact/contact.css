@@ -53,6 +53,7 @@
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 0.75rem 3.5rem;
+    cursor: pointer;
 }
 .links{
     display: flex;
@@ -65,4 +66,9 @@
     height: 3rem;
     width: 3rem;
     margin: 0 0.75rem;
+    cursor: pointer;
+}
+
+.link:hover {
+    transform: scale(1.25);
 }

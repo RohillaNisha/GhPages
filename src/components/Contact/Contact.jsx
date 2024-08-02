@@ -5,6 +5,8 @@ import LinkedIn from '../../assets/linkedin.png'
 import Instagram from '../../assets/insta.png'
 import Facebook from '../../assets/facebook.png'
 import emailjs from '@emailjs/browser'
+import { ExternalLink } from 'react-external-link'
+
 
 function Contact() {
   const form = useRef();
@@ -26,15 +28,15 @@ function Contact() {
         <h1 className="contactPageTitle">Contact Me</h1>
         <span className="contactDesc">Please fill out the form below to discuss any work opportunities.</span>
         <form ref={form} className="contactForm" onSubmit={sendEmail}>
-          <input type="text" className="name" placeholder="Your Name" name="from_name" />
-          <input type="email" className="email" placeholder="Your Email" name="from_email" />
-          <textarea className="msg" name="message" rows="5" placeholder='Your Message'></textarea>
+          <input type="text" className="name" placeholder="Your Name" name="from_name" required/>
+          <input type="email" className="email" placeholder="Your Email" name="from_email" required />
+          <textarea className="msg" name="message" rows="5" placeholder='Your Message' required ></textarea>
           <button type="submit" value="Send" className="submitBtn">Submit </button>
           <div className="links">
-            <img src={Github} alt="github image" className="link" />
-            <img src={LinkedIn} alt="linkedin image" className="link" />
-            <img src={Facebook} alt="facebook image" className="link" />
-            <img src={Instagram} alt="instagram image" className="link" />
+            <ExternalLink href="https://github.com/RohillaNisha"> <img src={Github} alt="github image" className="link" /> </ExternalLink>
+            <ExternalLink href="https://www.linkedin.com/in/nisharohilla88/"> <img src={LinkedIn} alt="linkedin image" className="link" /> </ExternalLink>
+            <ExternalLink href="https://www.facebook.com/profile.php?id=100000610492043"> <img src={Facebook} alt="facebook image" className="link" /> </ExternalLink>
+            <ExternalLink href="https://www.instagram.com/nisha.bioinfo/"> <img src={Instagram} alt="instagram image" className="link" /> </ExternalLink>
           </div>
         </form>
       </div>
