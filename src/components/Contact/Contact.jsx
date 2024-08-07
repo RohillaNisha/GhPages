@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import {useRef, useContext} from 'react'
 import './contact.css'
 import Github from '../../assets/github300.png'
 import LinkedIn from '../../assets/linkedin.png'
@@ -6,9 +6,26 @@ import Instagram from '../../assets/insta.png'
 import Facebook from '../../assets/facebook.png'
 import emailjs from '@emailjs/browser'
 import { ExternalLink } from 'react-external-link'
+import { TextboxContext } from '../Context/Context'
+// import { useState } from 'react'
+import { useEffect } from 'react'
 
 
 function Contact() {
+  const { hireClicked, setHireClicked } = useContext(TextboxContext);
+  const {message, setMessage } = useContext(TextboxContext);
+  // const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    if (hireClicked) {
+      setHireClicked(false); // Reset the hireClicked state after setting the message.
+    }
+  }, [hireClicked, setHireClicked]);
+
+  const handleChange = (e) => {
+    setMessage(e.target.value);
+  }
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,7 +47,7 @@ function Contact() {
         <form ref={form} className="contactForm" onSubmit={sendEmail}>
           <input type="text" className="name" placeholder="Your Name" name="from_name" required/>
           <input type="email" className="email" placeholder="Your Email" name="from_email" required />
-          <textarea className="msg" name="message" rows="5" placeholder='Your Message' required ></textarea>
+          <textarea className="msg" name="message" rows="5" placeholder='Your Message' onChange={handleChange} value={message} required ></textarea>
           <button type="submit" value="Send" className="submitBtn">Submit </button>
           <div className="links">
             <ExternalLink href="https://github.com/RohillaNisha"> <img src={Github} alt="github image" className="link" /> </ExternalLink>

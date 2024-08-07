@@ -4,20 +4,22 @@ import Skills from "./components/Skills/Skills.jsx"
 import Works from "./components/Works/Works.jsx"
 import Contact from "./components/Contact/Contact.jsx"
 import Footer from "./components/Footer/Footer.jsx"
+import { TextboxProvider } from "./components/Context/Context.jsx"
 
 
 function App() {
 
+
   return (
     <div className="App">
-    
-       <Navbar/>
-       <Intro/>
-       <Skills/>
-       <Works/>
-       <Contact/>
-       <Footer/>
-
+      <TextboxProvider >
+        <Navbar/>
+        <Intro/>
+        <Skills/>
+        <Works/>
+        <Contact/>
+        <Footer/>
+      </TextboxProvider>
     </div>
   )
 }
