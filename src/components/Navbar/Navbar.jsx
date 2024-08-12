@@ -13,13 +13,13 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
-        <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500}>
+        <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} onClick={()=> setMessage('')}>
           <img src={logo} alt="logo" className='logo' /> 
         </Link>
         <div className='desktopMenu'>
             <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem' onClick={()=> setMessage('') }>Home</Link>
-            <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-70} duration={500} className='desktopMenuListItem' onClick={()=> setMessage('') } >About</Link>
-            <Link activeClass='active' to='works' spy={true} smooth={true} offset={-70} duration={500} className='desktopMenuListItem' onClick={()=> setMessage('') }>Portfolio</Link>
+            <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem' onClick={()=> setMessage('') } >About</Link>
+            <Link activeClass='active' to='works' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem' onClick={()=> setMessage('') }>Portfolio</Link>
         </div>
         <button className='desktopMenuBtn' onClick={() => {
           document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
