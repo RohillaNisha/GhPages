@@ -1,4 +1,4 @@
-import profile from '../../assets/profile.png'
+import bg from '../../assets/bg.jpg'
 import hire from '../../assets/hireme.png'
 import {Link} from 'react-scroll'
 import './intro.css'
@@ -20,7 +20,7 @@ const Intro = () => {
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-70} duration={500} onClick={handleHireMeClick}> <button className="hireMeBtn"> <img className="btnImg" src={hire} alt="hire me" /> Hire Me</button> </Link>
 
       </div>
-      <img src={profile} alt="Profile" className="bg" />
+      <img src={bg} alt="Profile" className="bg" />
     </section>
   )
 }
