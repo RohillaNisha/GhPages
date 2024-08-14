@@ -17,32 +17,69 @@
     z-index: -1;
     object-fit: cover;
     height: 40vh;
-   
+    transition: transform 0.3s ease-in-out;    
 }
 
-.bg {
+.handIcon {
+    height:2.5rem;
+    margin-left: 0.5rem;
+    
+}
+
+#intro .bg {
+   
     animation: moveUpDown 1s infinite alternate;
 }
 
+.introText{
+    font-size: 7rem;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #bdb74e;
+    margin-bottom: 4rem;;
+
+}
+
 .introContent {
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    width: 80vw;
     padding: 2rem;
-    font-size: 3rem; 
-    font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center; 
 
 }
 
-.hello{
-    font-size: 1.75rem;
+.iAmFullStack {
+    font-size:2.5rem;
     font-weight: 100;
+    font-family:"Caveat", cursive;
+    color:cyan;
+    border-right: 0.2rem solid #fff;
+    white-space: nowrap;
+    animation: cursor .8s step-end infinite,
+                typing 5s steps(22) infinite alternate;
+    display: inline-block ;
+    overflow: hidden;
+    width: 0%;
+}
+
+.hello{
+    font-size: 2.5rem;
+    font-weight: 100;
+    font-family:"Caveat", cursive;
+    margin-bottom: 4vh;
+    margin-top: 3vh;
 }
 
 .introName{
-    color: rgba(255, 166, 0, 0.568);
+    font-size: 7rem;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #bfbdbd;    
+
 }
 
 .introPara {
@@ -71,6 +108,25 @@
     margin-right:0.5rem;
     height: 1rem;
 
+}
+
+@keyframes cursor {
+
+    50% {
+        border-color: transparent;
+    }
+    
+}
+
+@keyframes typing {
+    0%,10% {
+        width: 0%;
+    }
+
+    70%, 100% {
+        width: 100%;
+    }
+    
 }
 
 @keyframes moveUpDown  {
