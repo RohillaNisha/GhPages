@@ -51,15 +51,44 @@
 
 }
 
-.iAmFullStack {
-    font-size:2.5rem;
+ul li {
+    animation: slide calc(4*3*2s) steps(4) infinite;
+    display: inline-block;
+
+}
+
+ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 2.3rem;
+
+}
+
+.Iam{
+    display: flex;
+    flex-direction: row;
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: normal;
+    color: #bfbdbd;    
+}
+
+.listIAm {
+    /* font-size:2.5rem;
     font-weight: 100;
-    font-family:"Caveat", cursive;
+    font-family:"Caveat", cursive; */
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: normal;
     color:cyan;
     border-right: 0.2rem solid #fff;
     white-space: nowrap;
     animation: cursor .8s step-end infinite,
-                typing 5s steps(22) infinite alternate;
+                typing 3s steps(22) infinite alternate;
     display: inline-block ;
     overflow: hidden;
     width: 0%;
@@ -124,7 +153,14 @@
     }
 
     70%, 100% {
-        width: 100%;
+        width: 102%;
+    }
+    
+}
+
+@keyframes slide {
+    100% {
+        transform: translateY(-400%);
     }
     
 }

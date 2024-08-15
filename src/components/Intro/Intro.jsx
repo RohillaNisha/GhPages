@@ -17,7 +17,15 @@ const Intro = () => {
       <div className="introContent">
         <span className="hello">Hello !   <img src={hi} alt="hello hand" className="handIcon"/> My name is </span>
         <span className="introText"><span className="introName"> NISHA </span> ROHILLA </span>
-        <span className="iAmFullStack"> I am a Fullstack Developer </span>
+        <p className="Iam"> I am a  &nbsp;
+        <ul>
+          <li className='list'> <span className="listIAm"> Fullstack Developer </span></li>
+          <li className='list'> <span className="listIAm"> Balanced Multitasker </span></li>
+          <li className='list'> <span className="listIAm"> Coding Supermom </span></li>
+          <li className='list'> <span className="listIAm"> Daily Yogi </span></li>
+
+        </ul>
+        </p>
         {/* <span className="introText">I am  <span className="introName">Nisha</span> <br />Fullstack Web Developer </span> */}
         {/* <p className="introPara">Crafting Code, Creating Impact: Your Fullstack Web Developer for <br/> meaningful applications </p> */}
         {/* <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-70} duration={500} onClick={handleHireMeClick}> <button className="hireMeBtn"> <img className="btnImg" src={hire} alt="hire me" /> Hire Me</button> </Link> */}
