@@ -1,4 +1,4 @@
-.navbar{
+ .navbar{
     background: black;
     height: 6rem;
     width: 100vw;
@@ -7,19 +7,43 @@
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
     position: sticky;
     top: 0;
     z-index: 3;
+    flex-direction: column;
+    border-bottom: 1px solid #443e3e;
 
 
 }
+/* 
 
-.logo{
+.navbar::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    width: 100%;
+    align-items: start;
+    border-bottom: 1px solid #443e3e;
+} */
+
+.logo , .phoneLogo{
     /* object-fit: cover; */
     height: 3rem;
-    width: 4rem;
+    /* width: 4rem; */
     cursor: pointer;
+    position: absolute;
+    left:2vw;
+    top:2.6vh;
+    font-size:2.5rem;
+    font-weight: 100;
+    font-family:"Caveat", cursive; 
+    color: #bfbdbd;    
+}
+
+.phoneLogo {
+    display: none;
 }
 
 .desktopMenuListItem {
@@ -32,9 +56,9 @@
 }
 
 .desktopMenuListItem:hover {
-    color: rgba(255, 187, 0, 0.712);
+    color: #bdb74e;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid rgba(255, 187, 0, 0.712);
+    /* border-bottom: 3px solid  #bdb74e; */
 
 }
 
@@ -58,9 +82,9 @@
 }
 
 .desktopMenu .active , .navMenu .active {
-    color:  rgba(255, 187, 0, 0.712);
+    color:  #bdb74e;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid rgba(255, 187, 0, 0.712) ;
+    /* border-bottom: 3px solid #bdb74e ; */
 }
 
 .mobMenu{
@@ -92,7 +116,7 @@
     background: rgb(30,30,30);
 }
 
-@media screen and (max-width:525px) {
+/* @media screen and (max-width:525px) {
     .mobMenu {
         display: flex;
     }
@@ -104,4 +128,55 @@
         display: none;
     }
     
+} */
+
+
+@media screen and (max-width: 965px) {
+
+    .mobMenu {
+        display: flex;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+    }
+
+    
+
+    .navbar{
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .mobMenu {
+        display: flex;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+    }
+
+    
+
+    .navbar{
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .phoneLogo {
+        display: flex;
+    }
+
 }
