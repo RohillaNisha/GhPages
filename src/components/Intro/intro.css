@@ -5,7 +5,8 @@
     margin: 0 auto;
     overflow: hidden;   
     position: relative; 
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .bg{
@@ -48,6 +49,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center; 
+
+}
+
+.iconDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content:end;
+    margin-top: 12vh;
+}
+
+.socialMediaContactIcons{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    position: relative;
+    right:2vw;
+  
 
 }
 
@@ -139,6 +160,78 @@ ul {
 
 }
 
+.eatSleepCodeRepeat {
+    display: flex;
+    align-items: baseline;
+    width: 100vw;
+    max-width: 100rem;
+    justify-content: space-around;
+    margin-top: 0vh;
+    padding: 0 8vw;
+
+}
+
+.faUtensils{
+    color: red;
+}
+
+.eat , .sleep , .code , .repeat {
+    object-fit: cover;
+    margin: 2vh;
+    height: 6vh;
+    color:#807a7a;
+}
+
+.githubIcon , .linkedinIcon , .instaIcon , .fbIcon {
+    object-fit: cover;
+    height: 5vh;
+    color:#615c5c
+
+
+}
+
+.iconWithText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #d4c7c7;
+    font-family:  "Fredoka", sans-serif;
+    font-size: 1.5rem;
+}
+.eat:hover{
+    color: cyan;
+}
+
+.eatBraces{
+    color: cyan;
+}
+
+.sleepBraces{
+    color:#bdb74e;
+}
+
+.codeBraces{
+    color:#a3d077;
+}
+
+.repeatBraces{
+    color:#DA0063;
+}
+
+.sleep:hover{
+    color: #bdb74e;
+}
+
+
+.code:hover{
+    color: #a3d077;
+}
+
+.repeat:hover{
+    color: #DA0063;
+}
+
 @keyframes cursor {
 
     50% {
@@ -180,52 +273,190 @@ ul {
 @media screen and (max-width:375px) {
     .bg {
         height: 30vh;
-     
+    
     }
 
-    .introContent {
-        font-size: 2rem;
-       
+    .hello{
+        font-size: 1.5rem;
     }
+
+    .handIcon{
+        height:1.6rem;
+    }
+
+    .introText, .introName{
+        font-size: 3.5rem;
+    }
+
+    .Iam{
+        font-size: 1rem;
+    }
+
+    .listIAm{
+        font-size: 1.1rem;
+    }
+
+    ul{
+        height: 1.73rem;
+
+    }
+
+    .iconDiv{
+
+        margin-top: 18vh;
+        align-items: center;
+    }
+
+    .socialMediaContactIcons{
+       display: none;
+    }
+
+    .eat , .sleep , .code , .repeat {
+        height: 4vh;   
+    }
+
+
+    .iconWithText{
+        font-size: 0.60rem;
+    }
+
+
     
 }
 
-@media screen and (max-width:430px) and (min-width: 375px) {
+@media screen and (max-width:430px) and (min-width: 376px) {
     .bg {
-        height: 35vh;
+        height: 30vh;
+        right:35vw;
+    }
+      .hello{
+        font-size: 1.5rem;
     }
 
-    .introContent {
-        font-size: 2rem;
-       
+    .handIcon{
+        height:1.6rem;
     }
+
+    .introText, .introName{
+        font-size: 3.5rem;
+    }
+
+    .Iam{
+        font-size: 1rem;
+    }
+
+    .listIAm{
+        font-size: 1.1rem;
+    }
+
+    ul{
+        height: 1.73rem;
+
+    }
+    .introContent{
+        margin-top: 25vh;
+    }
+
+    .iconDiv{
+        margin-top: 4vh;
+
+        align-items: start;
+    }
+
+    .socialMediaContactIcons{
+        display: none;
+    
+    }
+    .eat , .sleep , .code , .repeat {
+        height: 4vh;   
+    }
+
+    .githubIcon , .linkedinIcon , .instaIcon , .fbIcon {
+        height: 3.5vh;
+
+    }
+    
+
+    .iconWithText{
+        font-size: 0.7rem;
+    }
+
+
+
+  
     
 }
 
 
 
-@media screen and (max-width:768px) and (min-width: 430px){
+@media screen and (max-width:768px) and (min-width: 431px){
     .bg {
-        height: 37vh;
+        height: 30vh;
+    }
+      
+    .iconDiv{
+        margin-top: 17vh;
 
+        align-items: start;
     }
 
-    .introContent {
-        font-size: 2rem;
-       
+    .socialMediaContactIcons{
+        display: none;
+    
     }
+    .eat , .sleep , .code , .repeat {
+        height: 6vh;   
+    }
+
+    .githubIcon , .linkedinIcon , .instaIcon , .fbIcon {
+        height: 4vh;
+
+    }
+    
+
+    .iconWithText{
+        font-size: 1rem;
+    }
+
+
     
 }
 
-@media screen and (max-width:1024px) and (min-width: 768px) {
+@media screen and (max-width:1024px) and (min-width: 769px) {
     .bg {
         height: 40vh;
+    }
+      
+    .iconDiv{
+        margin-top: 25vh;
 
+        align-items: start;
     }
 
-    .introContent {
-        font-size: 2.5rem;
-       
+    .eat , .sleep , .code , .repeat {
+        height: 6vh;   
+    }
+
+    .githubIcon , .linkedinIcon , .instaIcon , .fbIcon {
+        height: 4vh;
+
     }
     
+
+    .iconWithText{
+        font-size: 1rem;
+    }
+
+    .socialMediaContactIcons{
+        height: 17vh;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        right:5vw;
+      
+    
+    }
+
+
 }

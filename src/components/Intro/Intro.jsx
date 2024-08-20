@@ -1,10 +1,18 @@
 import profile from '../../assets/profile.png'
 import hi from '../../assets/hi.png'
-import hire from '../../assets/hireme.png'
-import {Link} from 'react-scroll'
+// import {Link} from 'react-scroll'
 import './intro.css'
 import { TextboxContext} from '../Context/Context.jsx'
 import { useContext } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUtensils } from '@fortawesome/free-solid-svg-icons'
+import { faBed} from '@fortawesome/free-solid-svg-icons'
+import { faCode} from '@fortawesome/free-solid-svg-icons'
+import { faRepeat} from '@fortawesome/free-solid-svg-icons'
+import { faSquareGithub} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faSquareInstagram} from '@fortawesome/free-brands-svg-icons'
 
 
 const Intro = () => {
@@ -23,13 +31,38 @@ const Intro = () => {
           <li className='list'> <span className="listIAm"> Balanced Multitasker </span></li>
           <li className='list'> <span className="listIAm"> Coding Supermom </span></li>
           <li className='list'> <span className="listIAm"> Daily Yogi </span></li>
-
         </ul>
-        </p>
+        </p> 
         {/* <span className="introText">I am  <span className="introName">Nisha</span> <br />Fullstack Web Developer </span> */}
         {/* <p className="introPara">Crafting Code, Creating Impact: Your Fullstack Web Developer for <br/> meaningful applications </p> */}
         {/* <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-70} duration={500} onClick={handleHireMeClick}> <button className="hireMeBtn"> <img className="btnImg" src={hire} alt="hire me" /> Hire Me</button> </Link> */}
       </div>
+      <div className="iconDiv">
+        <div className="eatSleepCodeRepeat">
+          <div className="iconWithText">
+            <FontAwesomeIcon icon={faUtensils} className="eat"/>
+            <span>eat <span className="eatBraces">( );</span></span>  
+          </div>
+          <div className="iconWithText">
+            <FontAwesomeIcon icon={faBed} className="sleep" />
+            <span> sleep <span className="sleepBraces">( );</span></span>
+          </div>
+          <div className="iconWithText">
+            <FontAwesomeIcon icon={faCode} className="code" />
+            <span>code <span className="codeBraces">( );</span></span> 
+          </div>
+          <div className="iconWithText">
+            <FontAwesomeIcon icon={faRepeat} className="repeat" /> 
+            <span>repeat <span className="repeatBraces">( );</span></span>
+          </div>
+        </div>
+        <div className="socialMediaContactIcons">
+          <FontAwesomeIcon icon={faSquareGithub} className="githubIcon" />
+          <FontAwesomeIcon icon={faLinkedin} className="linkedinIcon" />
+          <FontAwesomeIcon icon={faSquareInstagram}  className="instaIcon"/>
+          <FontAwesomeIcon icon={faSquareFacebook} className="fbIcon"/>
+        </div>    
+      </div>   
       <img src={profile} alt="Profile" className="bg" />
     </section>
   )
