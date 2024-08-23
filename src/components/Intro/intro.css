@@ -185,9 +185,32 @@ ul {
 .githubIcon , .linkedinIcon , .instaIcon , .fbIcon {
     object-fit: cover;
     height: 5vh;
-    color:#615c5c
+    /* background: #d4c7c7; */
+    color:#615c5c;
+    /* color:#fff; */
+    padding: 0.75rem;
+    border-radius: 50%;
 
+}
 
+.githubIcon:hover{
+    color:black;
+    background: #fff;
+}
+
+.fbIcon:hover{
+    color: #3B5998 ;
+    background:#fff;
+} 
+
+.linkedinIcon:hover {
+    color:#007BB5;
+    background: #fff;
+}
+
+.instaIcon:hover {
+    color: #f14843;
+    background: #fff;
 }
 
 .iconWithText{
@@ -373,9 +396,9 @@ ul {
 
     .githubIcon , .linkedinIcon , .instaIcon , .fbIcon {
         height: 3.5vh;
-
+        
     }
-    
+ 
 
     .iconWithText{
         font-size: 0.7rem;
