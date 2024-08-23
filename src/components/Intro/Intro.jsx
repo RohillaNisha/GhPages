@@ -4,6 +4,7 @@ import hi from '../../assets/hi.png'
 import './intro.css'
 import { TextboxContext} from '../Context/Context.jsx'
 import { useContext } from 'react'
+import { ExternalLink } from 'react-external-link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { faBed} from '@fortawesome/free-solid-svg-icons'
@@ -57,10 +58,10 @@ const Intro = () => {
           </div>
         </div>
         <div className="socialMediaContactIcons">
-          <FontAwesomeIcon icon={faSquareGithub} className="githubIcon" />
-          <FontAwesomeIcon icon={faLinkedin} className="linkedinIcon" />
-          <FontAwesomeIcon icon={faSquareInstagram}  className="instaIcon"/>
-          <FontAwesomeIcon icon={faSquareFacebook} className="fbIcon"/>
+          <ExternalLink href="https://github.com/RohillaNisha"> <FontAwesomeIcon icon={faSquareGithub} className="githubIcon" />  </ExternalLink>
+          <ExternalLink href="https://www.linkedin.com/in/nisharohilla88/">  <FontAwesomeIcon icon={faLinkedin} className="linkedinIcon" />  </ExternalLink>
+          <ExternalLink href="https://www.facebook.com/profile.php?id=100000610492043"><FontAwesomeIcon icon={faSquareFacebook} className="fbIcon"/> </ExternalLink>
+          <ExternalLink href="https://www.instagram.com/nisha.bioinfo/"> <FontAwesomeIcon icon={faSquareInstagram}  className="instaIcon"/> </ExternalLink>   
         </div>    
       </div>   
       <img src={profile} alt="Profile" className="bg" />
